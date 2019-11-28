@@ -9,7 +9,7 @@ jobs:
 
     steps:
     - run: |
-        echo I'm inside a container
+        echo Im inside a container
         repo init -u https://android.googlesource.com/platform/manifest -b android-8.1.0_r70
         container: kylemanna/aosp:latest
         name: Run in container
