@@ -14,4 +14,9 @@ jobs:
       run: |
         echo Im inside a container
         repo init -u https://android.googlesource.com/platform/manifest -b android-8.1.0_r70
+        repo sync -j16
+        source build/envsetup.sh
+        lunch aosp_arm-eng
+        make -j64
+
         
