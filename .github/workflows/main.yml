@@ -6,12 +6,12 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    container:
+      image: kylemanna/aosp:latest
+      
     steps:
-    - run: |
+    - name: repo in container
+      run: |
         echo Im inside a container
         repo init -u https://android.googlesource.com/platform/manifest -b android-8.1.0_r70
-        container: kylemanna/aosp:latest
-        name: Run in container
         
-      
